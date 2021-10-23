@@ -3,10 +3,10 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 RUN npm install
+RUN npm install -g serve
 
 COPY . .
-RUN npm build
+#RUN npm run build
 
-EXPOSE 8080
-USER node
-CMD [ "serve", "-s", "build" ]
+EXPOSE 5000
+CMD ["serve", "-s", "build"]
