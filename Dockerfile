@@ -6,6 +6,7 @@ RUN npm install
 RUN npm install -g serve
 
 COPY . .
+#not needed
 #RUN npm run build
 
 EXPOSE 5000
